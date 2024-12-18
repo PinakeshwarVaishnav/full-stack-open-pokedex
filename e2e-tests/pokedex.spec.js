@@ -10,4 +10,10 @@ describe("Pokedex", () => {
       ),
     ).toBeVisible();
   });
+
+  test("pokemon page can be navigated to", async ({ page }) => {
+    await page.goto("http://localhost:8080/pokemon/ivysaur");
+    await expect(page.getByText("ivysaur")).toBeVisible();
+    await expect(page.getByText("chlorophyll")).toBeVisible();
+  });
 });
