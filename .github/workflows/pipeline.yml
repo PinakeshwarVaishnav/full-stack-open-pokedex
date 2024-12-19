@@ -27,3 +27,10 @@ jobs:
 
       - name: Run linter
         run: npm run eslint
+
+      - name: Render Deployment
+        uses: sws2apps/render-deployment@v1.8.0
+        with:
+          serviceId: ${{secrets.RENDER_SERVICE_ID}}
+          apiKey: ${{secrets.RENDER_API_KEY}}
+          multipleDeployment: false
