@@ -10,7 +10,7 @@ on:
 
 jobs:
   check-skip:
-    uses: ./.github/workflows/check-skip.yml@${{github.ref}}
+    uses: ./.github/workflows/check-skip.yml
     with:
       pr_title: ${{github.event.pull_request.title}}
       pr_body: ${{github.event.pull_request.body}}
